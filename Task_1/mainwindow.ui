@@ -10,6 +10,11 @@
     <height>692</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -25,8 +30,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>140</y>
+      <x>260</x>
+      <y>120</y>
       <width>571</width>
       <height>131</height>
      </rect>
@@ -37,7 +42,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #bcbeb3;
+     <string notr="true">color: #b6beb3;
 QTextEdit { line-height: 15; };
 border: none;</string>
     </property>
@@ -51,7 +56,7 @@ border: none;</string>
      <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
     <property name="readOnly">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -64,45 +69,32 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Start_new_test_button">
+   <widget class="QPushButton" name="update_text_edit_button">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>210</y>
-      <width>31</width>
-      <height>31</height>
+      <x>20</x>
+      <y>230</y>
+      <width>151</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #333438</string>
+     <string notr="true"/>
     </property>
     <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="English_space_button">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>510</y>
-      <width>411</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
+     <string>Update text</string>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>460</y>
+      <y>450</y>
       <width>842</width>
-      <height>41</height>
+      <height>86</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="down_gridLayout">
@@ -113,17 +105,38 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </property>
       </widget>
      </item>
+     <item row="0" column="6">
+      <widget class="QPushButton" name="English_m_button">
+       <property name="text">
+        <string>m</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="8">
+      <widget class="QPushButton" name="English_dot_button">
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QPushButton" name="English_n_button">
+       <property name="text">
+        <string>n</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QPushButton" name="English_comma_button">
+       <property name="text">
+        <string>,</string>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="1">
       <widget class="QPushButton" name="English_x_button">
        <property name="text">
         <string>x</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="English_c_button">
-       <property name="text">
-        <string>c</string>
        </property>
       </widget>
      </item>
@@ -141,31 +154,17 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </property>
       </widget>
      </item>
-     <item row="0" column="5">
-      <widget class="QPushButton" name="English_n_button">
+     <item row="0" column="2">
+      <widget class="QPushButton" name="English_c_button">
        <property name="text">
-        <string>n</string>
+        <string>c</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="6">
-      <widget class="QPushButton" name="English_m_button">
+     <item row="1" column="2" colspan="5">
+      <widget class="QPushButton" name="English_space_button">
        <property name="text">
-        <string>m</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="7">
-      <widget class="QPushButton" name="English_comma_button">
-       <property name="text">
-        <string>,</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="8">
-      <widget class="QPushButton" name="English_dot_button">
-       <property name="text">
-        <string>.</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -175,12 +174,47 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>410</y>
-      <width>942</width>
-      <height>41</height>
+      <y>400</y>
+      <width>941</width>
+      <height>51</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="mid_gridLayout">
+     <item row="0" column="2">
+      <widget class="QPushButton" name="English_d_button">
+       <property name="text">
+        <string>d</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QPushButton" name="English_g_button">
+       <property name="text">
+        <string>g</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QPushButton" name="English_j_button">
+       <property name="text">
+        <string>j</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="9">
+      <widget class="QPushButton" name="English_CAD_button">
+       <property name="text">
+        <string>;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="English_f_button">
+       <property name="text">
+        <string>f</string>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="0">
       <widget class="QPushButton" name="English_a_button">
        <property name="text">
@@ -195,38 +229,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </property>
       </widget>
      </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="English_d_button">
+     <item row="0" column="8">
+      <widget class="QPushButton" name="English_l_button">
        <property name="text">
-        <string>d</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
-      <widget class="QPushButton" name="English_f_button">
-       <property name="text">
-        <string>f</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="4">
-      <widget class="QPushButton" name="English_g_button">
-       <property name="text">
-        <string>g</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="5">
-      <widget class="QPushButton" name="English_h_button">
-       <property name="text">
-        <string>h</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="6">
-      <widget class="QPushButton" name="English_j_button">
-       <property name="text">
-        <string>j</string>
+        <string>l</string>
        </property>
       </widget>
      </item>
@@ -237,17 +243,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </property>
       </widget>
      </item>
-     <item row="0" column="8">
-      <widget class="QPushButton" name="English_l_button">
+     <item row="0" column="5">
+      <widget class="QPushButton" name="English_h_button">
        <property name="text">
-        <string>l</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="9">
-      <widget class="QPushButton" name="English_CAD_button">
-       <property name="text">
-        <string>;</string>
+        <string>h</string>
        </property>
       </widget>
      </item>
@@ -272,6 +271,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <layout class="QGridLayout" name="up_gridLayout">
      <item row="0" column="0">
       <widget class="QPushButton" name="English_q_button">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">height 10 px;</string>
        </property>
@@ -363,7 +367,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <property name="geometry">
      <rect>
       <x>970</x>
-      <y>20</y>
+      <y>50</y>
       <width>141</width>
       <height>41</height>
      </rect>
@@ -402,6 +406,64 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <item>
      <property name="text">
       <string>Hebrew</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="time_label">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>80</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Titillium Web</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #000000
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="time_combobox">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>110</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <item>
+     <property name="text">
+      <string>15 sec</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>30 sec</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>45 sec</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>60 sec</string>
      </property>
     </item>
    </widget>
